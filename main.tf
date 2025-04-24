@@ -15,3 +15,14 @@ resource "aws_lightsail_instance" "terraform" {
     Team = "Cloud"
   }
 }
+
+output "my-public-ip" {
+  value = aws_lightsail_instance.terraform.public_ip_address
+}
+output "key_pair_name" {
+  value = aws_lightsail_instance.terraform.key_pair_name
+}
+output "user-name" {
+    value = aws_lightsail_instance.terraform.username
+  
+}
